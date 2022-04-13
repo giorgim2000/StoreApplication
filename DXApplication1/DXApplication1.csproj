@@ -113,6 +113,7 @@
     <Compile Include="CityForms\CitiesForm.Designer.cs">
       <DependentUpon>CitiesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Constants\DialogType.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,8 +124,23 @@
     <Compile Include="Models\BaseForCreationDto.cs" />
     <Compile Include="Models\BaseForUpdateDto.cs" />
     <Compile Include="Models\CityDto.cs" />
+    <Compile Include="Models\ProductCreateDto.cs" />
+    <Compile Include="Models\ProductDto.cs" />
+    <Compile Include="Models\ProductUpdateDto.cs" />
     <Compile Include="Models\UserForLogInDto.cs" />
     <Compile Include="Models\UserForRegistrationDto.cs" />
+    <Compile Include="ProductForms\ProductDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductForms\ProductDialog.Designer.cs">
+      <DependentUpon>ProductDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductForms\ProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductForms\ProductForm.Designer.cs">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterForms\RegistrationForm.cs">
@@ -135,8 +151,15 @@
     </Compile>
     <Compile Include="Services\BaseService.cs" />
     <Compile Include="Services\CityService.cs" />
+    <Compile Include="Services\ProductService.cs" />
     <Compile Include="Services\Serilizer.cs" />
     <Compile Include="Services\UserService.cs" />
+    <Compile Include="WelcomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeForm.Designer.cs">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BaseForms\BaseDialog.resx">
       <DependentUpon>BaseDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +175,12 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProductForms\ProductDialog.resx">
+      <DependentUpon>ProductDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductForms\ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -165,8 +194,12 @@
     <EmbeddedResource Include="RegisterForms\RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeForm.resx">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DXApplication1.Models.ProductDto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -30,19 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.registerBtn = new System.Windows.Forms.Button();
+            this.loginBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.passwordTxtBox = new System.Windows.Forms.TextBox();
+            this.userNameTxtBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.basesElement = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.productsElement = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.citiesElement = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.logOutBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.fluentDesignFormContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
@@ -52,53 +55,57 @@
             // 
             // fluentDesignFormContainer1
             // 
-            this.fluentDesignFormContainer1.Appearance.BackColor = System.Drawing.Color.Teal;
+            this.fluentDesignFormContainer1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(219)))), ((int)(((byte)(149)))));
             this.fluentDesignFormContainer1.Appearance.Options.UseBackColor = true;
-            this.fluentDesignFormContainer1.Controls.Add(this.button2);
-            this.fluentDesignFormContainer1.Controls.Add(this.button1);
+            this.fluentDesignFormContainer1.Controls.Add(this.registerBtn);
+            this.fluentDesignFormContainer1.Controls.Add(this.loginBtn);
             this.fluentDesignFormContainer1.Controls.Add(this.label3);
             this.fluentDesignFormContainer1.Controls.Add(this.label2);
-            this.fluentDesignFormContainer1.Controls.Add(this.textBox2);
-            this.fluentDesignFormContainer1.Controls.Add(this.textBox1);
+            this.fluentDesignFormContainer1.Controls.Add(this.passwordTxtBox);
+            this.fluentDesignFormContainer1.Controls.Add(this.userNameTxtBox);
             this.fluentDesignFormContainer1.Controls.Add(this.label1);
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(435, 39);
-            this.fluentDesignFormContainer1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(267, 39);
+            this.fluentDesignFormContainer1.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(671, 696);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(875, 667);
             this.fluentDesignFormContainer1.TabIndex = 0;
             // 
-            // button2
+            // registerBtn
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(352, 706);
-            this.button2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(339, 78);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Register";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.registerBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.registerBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.registerBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerBtn.Location = new System.Drawing.Point(248, 518);
+            this.registerBtn.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.registerBtn.Name = "registerBtn";
+            this.registerBtn.Size = new System.Drawing.Size(387, 110);
+            this.registerBtn.TabIndex = 6;
+            this.registerBtn.Text = "Register";
+            this.registerBtn.UseVisualStyleBackColor = false;
+            this.registerBtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // loginBtn
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(352, 601);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(339, 78);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Log In";
-            this.button1.UseVisualStyleBackColor = false;
+            this.loginBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.loginBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.loginBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginBtn.Location = new System.Drawing.Point(244, 378);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(387, 110);
+            this.loginBtn.TabIndex = 5;
+            this.loginBtn.Text = "Log In";
+            this.loginBtn.UseVisualStyleBackColor = false;
+            this.loginBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(348, 452);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Location = new System.Drawing.Point(244, 225);
+            this.label3.Margin = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 24);
             this.label3.TabIndex = 4;
@@ -106,39 +113,43 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(348, 340);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Location = new System.Drawing.Point(244, 125);
+            this.label2.Margin = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Username";
             // 
-            // textBox2
+            // passwordTxtBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(352, 495);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(336, 32);
-            this.textBox2.TabIndex = 2;
+            this.passwordTxtBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.passwordTxtBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTxtBox.Location = new System.Drawing.Point(248, 264);
+            this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.passwordTxtBox.Name = "passwordTxtBox";
+            this.passwordTxtBox.Size = new System.Drawing.Size(383, 32);
+            this.passwordTxtBox.TabIndex = 2;
             // 
-            // textBox1
+            // userNameTxtBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(352, 382);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(336, 32);
-            this.textBox1.TabIndex = 1;
+            this.userNameTxtBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.userNameTxtBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameTxtBox.Location = new System.Drawing.Point(244, 164);
+            this.userNameTxtBox.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.userNameTxtBox.Name = "userNameTxtBox";
+            this.userNameTxtBox.Size = new System.Drawing.Size(387, 32);
+            this.userNameTxtBox.TabIndex = 1;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(435, 130);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Location = new System.Drawing.Point(379, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 36);
             this.label1.TabIndex = 0;
@@ -148,12 +159,13 @@
             // 
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement4});
+            this.accordionControlElement4,
+            this.logOutBtn});
             this.accordionControl1.Location = new System.Drawing.Point(0, 39);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(435, 696);
+            this.accordionControl1.Size = new System.Drawing.Size(267, 667);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -163,6 +175,7 @@
             this.basesElement,
             this.productsElement,
             this.citiesElement});
+            this.accordionControlElement4.Expanded = true;
             this.accordionControlElement4.Name = "accordionControlElement4";
             this.accordionControlElement4.Text = "Data Base\'s";
             // 
@@ -178,6 +191,7 @@
             this.productsElement.Name = "productsElement";
             this.productsElement.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.productsElement.Text = "Products";
+            this.productsElement.Click += new System.EventHandler(this.productsElement_Click);
             // 
             // citiesElement
             // 
@@ -186,25 +200,53 @@
             this.citiesElement.Text = "Cities";
             this.citiesElement.Click += new System.EventHandler(this.citiesElement_Click);
             // 
+            // logOutBtn
+            // 
+            this.logOutBtn.Name = "logOutBtn";
+            this.logOutBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.logOutBtn.Text = "Log Out";
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
+            // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
+            this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barStaticItem1,
+            this.barHeaderItem1});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1106, 39);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1142, 39);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
+            // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barStaticItem1.Caption = "barStaticItem1";
+            this.barStaticItem1.Id = 0;
+            this.barStaticItem1.Name = "barStaticItem1";
+            // 
+            // barHeaderItem1
+            // 
+            this.barHeaderItem1.Id = 1;
+            this.barHeaderItem1.Name = "barHeaderItem1";
             // 
             // fluentFormDefaultManager1
             // 
             this.fluentFormDefaultManager1.Form = this;
+            this.fluentFormDefaultManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barStaticItem1,
+            this.barHeaderItem1});
+            this.fluentFormDefaultManager1.MaxItemId = 2;
             // 
             // MainForm
             // 
+            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(219)))), ((int)(((byte)(149)))));
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1106, 735);
+            this.ClientSize = new System.Drawing.Size(1142, 706);
             this.ControlContainer = this.fluentDesignFormContainer1;
             this.Controls.Add(this.fluentDesignFormContainer1);
             this.Controls.Add(this.accordionControl1);
@@ -232,13 +274,16 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement basesElement;
         private DevExpress.XtraBars.Navigation.AccordionControlElement productsElement;
         private DevExpress.XtraBars.Navigation.AccordionControlElement citiesElement;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button registerBtn;
+        private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox passwordTxtBox;
+        private System.Windows.Forms.TextBox userNameTxtBox;
         private System.Windows.Forms.Label label1;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
+        private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement logOutBtn;
     }
 }
 

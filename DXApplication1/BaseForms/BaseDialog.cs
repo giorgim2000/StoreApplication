@@ -29,7 +29,6 @@ namespace DXApplication1.BaseForms
             baseNameTxtBox.Text = baseDto.BaseName;
             adressTxtBox.Text = baseDto.Adress;
             LoadCities(baseDto.CityName);
-            //cityComboBox.SelectedIndex = cityComboBox.Items.IndexOf(baseDto.CityName);
         }
         public BaseDialog()
         {
@@ -44,10 +43,12 @@ namespace DXApplication1.BaseForms
             {
                 cityList = CityService.Cities;
             }
+
             foreach (var city in cityList)
             {
                 cityComboBox.Items.Add(city.CityName);
             }
+
             if(name != null)
                 cityComboBox.SelectedIndex = cityComboBox.Items.IndexOf(name);
         }

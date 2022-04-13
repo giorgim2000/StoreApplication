@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraBars;
+using DXApplication1.ProductForms;
 using DXApplication1.Services;
 using System;
 using System.Collections.Generic;
@@ -14,20 +15,36 @@ namespace DXApplication1
     public partial class MainForm : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
         public static string Username = null;
-        public static int UserId = 0;
+        UserService userservice;
         public MainForm()
         {
             InitializeComponent();
-            if (Username == null && UserId == 0)
+            CheckAuthentication();
+        }
+
+        public void CheckAuthentication()
+        {
+            if(Username == null)
             {
                 basesElement.Enabled = false;
                 productsElement.Enabled = false;
                 citiesElement.Enabled = false;
+                logOutBtn.Enabled = false;
+                logOutBtn.Visible = false;
+            }
+            else
+            {
+                basesElement.Enabled = true;
+                productsElement.Enabled = true;
+                citiesElement.Enabled = true;
+                logOutBtn.Enabled = true;
+                logOutBtn.Visible = true;
             }
         }
 
         Form OpenForm(Form inputForm)
         {
+            CheckAuthentication();
             inputForm.TopLevel = false;
             inputForm.FormBorderStyle = FormBorderStyle.None;
             inputForm.Dock = DockStyle.Fill;
@@ -39,7 +56,8 @@ namespace DXApplication1
 
         private void citiesElement_Click(object sender, EventArgs e)
         {
-            OpenForm(new CitiesForm());
+            var citiesForm = new CitiesForm();
+            OpenForm(citiesForm);
         }
 
         private void basesElement_Click(object sender, EventArgs e)
@@ -50,11 +68,47 @@ namespace DXApplication1
         private void button2_Click(object sender, EventArgs e)
         {
             var regForm = new RegistrationForm.RegistrationForm();
-            OpenForm(regForm).FormClosed += (s, ev) =>
+            OpenForm(regForm).FormClosed += (s, ev) => { OnFormCloseMethod(); };
+        }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrEmpty(userNameTxtBox.Text) &&
+                !string.IsNullOrEmpty(passwordTxtBox.Text))
             {
-                Controls.Clear();
-                InitializeComponent();
-            };
+                Username = userNameTxtBox.Text;
+                userservice = new UserService();
+                var result = await userservice.LogIn(userNameTxtBox.Text, passwordTxtBox.Text);
+                if (result)
+                {
+                    CheckAuthentication();
+                    var welcome = new WelcomeForm();
+                    OpenForm(welcome).FormClosed += (s, ev) => { OnFormCloseMethod(); };
+                }
+                else
+                {
+                    Username = null;
+                }
+            }
+        }
+
+        private async void logOutBtn_Click(object sender, EventArgs e)
+        {
+            userservice = new UserService();
+            await userservice.LogOut();
+            OnFormCloseMethod();
+        }
+
+        private void productsElement_Click(object sender, EventArgs e)
+        {
+            var prodForm = new ProductForm();
+            OpenForm(prodForm).FormClosed += (s, ev) => { OnFormCloseMethod(); };
+        }
+        public void OnFormCloseMethod()
+        {
+            Controls.Clear();
+            InitializeComponent();
+            CheckAuthentication();
         }
     }
 }

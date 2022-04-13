@@ -52,7 +52,7 @@ namespace DXApplication1
                 LoadBases();
             }
             else if (dataGridView1.Columns[e.ColumnIndex].Name == "edit")
-            {
+            { 
                 var baseDto = new BaseDto()
                 {
                     Id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value,
