@@ -20,7 +20,7 @@ namespace DXApplication1.Services
             {
                 using (var _httpClient = new HttpClient())
                 {
-                    _httpClient.BaseAddress = new Uri("https://localhost:7001/api/products");
+                    _httpClient.BaseAddress = new Uri($"{MainForm.ApiAdress}/products");
                     _httpClient.Timeout = new TimeSpan(0, 0, 30);
                     _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                     var response = await _httpClient.GetAsync("");
@@ -43,7 +43,7 @@ namespace DXApplication1.Services
             {
                 using (var _httpClient = new HttpClient())
                 {
-                    _httpClient.BaseAddress = new Uri($"https://localhost:7001/api/products");
+                    _httpClient.BaseAddress = new Uri($"{MainForm.ApiAdress}/products");
                     _httpClient.Timeout = new TimeSpan(0, 0, 30);
                     var response = await _httpClient.PostAsync("", JsonContent.Create(product));
                     if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
@@ -63,7 +63,7 @@ namespace DXApplication1.Services
             {
                 using (var _httpClient = new HttpClient())
                 {
-                    _httpClient.BaseAddress = new Uri($"https://localhost:7001/api/products/UpdateProduct");
+                    _httpClient.BaseAddress = new Uri($"{MainForm.ApiAdress}/products/UpdateProduct");
                     _httpClient.Timeout = new TimeSpan(0, 0, 30);
                     var response = await _httpClient.PutAsync("", JsonContent.Create(product));
                     if (response.StatusCode == System.Net.HttpStatusCode.OK)
@@ -83,7 +83,7 @@ namespace DXApplication1.Services
             {
                 using (var _httpClient = new HttpClient())
                 {
-                    _httpClient.BaseAddress = new Uri($"https://localhost:7001/api/products?productId={id}");
+                    _httpClient.BaseAddress = new Uri($"{MainForm.ApiAdress}/products?productId={id}");
                     _httpClient.Timeout = new TimeSpan(0, 0, 30);
                     var response = await _httpClient.DeleteAsync("");
                     if (response.StatusCode == System.Net.HttpStatusCode.NotFound)

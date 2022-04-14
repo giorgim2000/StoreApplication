@@ -23,12 +23,13 @@ namespace DXApplication1.Services
             {
                 using (var _httpClient = new HttpClient())
                 {
-                    _httpClient.BaseAddress = new Uri($"https://localhost:7001/api/Authentication/RegisterUser");
+                    _httpClient.BaseAddress = new Uri($"{MainForm.ApiAdress}/Authentication/RegisterUser");
                     _httpClient.Timeout = new TimeSpan(0, 0, 30);
                     HttpRequestMessage request = new HttpRequestMessage(
                             HttpMethod.Post, _httpClient.BaseAddress);
                     request.Content = JsonContent.Create(user);
                     var response = await _httpClient.SendAsync(request);
+                    var responseText = await response.Content.ReadAsStringAsync();
                     if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
                     {
                         MessageBox.Show("You have registered successfully!");
@@ -36,7 +37,7 @@ namespace DXApplication1.Services
                     }
                     else if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                     {
-                        MessageBox.Show($"{await response.Content.ReadAsStringAsync()}");
+                        MessageBox.Show($"{responseText}");
                     }
                 }
             }
@@ -59,7 +60,8 @@ namespace DXApplication1.Services
                         Password = password
                     });
                     var response = await _httpClient.PostAsync(
-                        $"https://localhost:7001/api/Authentication/Authenticate", req);
+                        $"{MainForm.ApiAdress}/Authentication/Authenticate", req);
+                    string responseText = await response.Content.ReadAsStringAsync();
                     if (response.StatusCode == System.Net.HttpStatusCode.OK)
                     {
                         MainForm.Username = userName;
@@ -67,7 +69,7 @@ namespace DXApplication1.Services
                     }
                     else if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                     {
-                        MessageBox.Show($"{await response.Content.ReadAsStringAsync()}");
+                        MessageBox.Show($"{responseText}");
                     }
                 }
             }
@@ -84,11 +86,10 @@ namespace DXApplication1.Services
                 using (var _httpClient = new HttpClient())
                 {
                     _httpClient.Timeout = new TimeSpan(0, 0, 30);
-                    var response = await _httpClient.PostAsync("https://localhost:7001/api/Authentication/LogOut", null);
+                    var response = await _httpClient.PostAsync($"{MainForm.ApiAdress}/Authentication/LogOut", null);
                     if(response.StatusCode == System.Net.HttpStatusCode.OK)
                     {
                         MainForm.Username =null;
-
                     }
                 }
             }

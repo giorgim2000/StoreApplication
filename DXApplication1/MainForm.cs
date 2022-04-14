@@ -15,6 +15,7 @@ namespace DXApplication1
 {
     public partial class MainForm : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
+        public static string ApiAdress = Properties.Settings.Default.api;
         public static string Username = null;
         UserService userservice;
         ViewHide viewHide = ViewHide.View;

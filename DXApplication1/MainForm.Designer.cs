@@ -57,6 +57,7 @@
             // 
             // fluentDesignFormContainer1
             // 
+            this.fluentDesignFormContainer1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.fluentDesignFormContainer1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(219)))), ((int)(((byte)(149)))));
             this.fluentDesignFormContainer1.Appearance.Options.UseBackColor = true;
             this.fluentDesignFormContainer1.Controls.Add(this.pictureBox1);
@@ -67,7 +68,6 @@
             this.fluentDesignFormContainer1.Controls.Add(this.passwordTxtBox);
             this.fluentDesignFormContainer1.Controls.Add(this.userNameTxtBox);
             this.fluentDesignFormContainer1.Controls.Add(this.label1);
-            this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fluentDesignFormContainer1.Location = new System.Drawing.Point(267, 39);
             this.fluentDesignFormContainer1.Margin = new System.Windows.Forms.Padding(15);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
@@ -76,6 +76,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::DXApplication1.Properties.Resources.view;
             this.pictureBox1.Location = new System.Drawing.Point(641, 264);

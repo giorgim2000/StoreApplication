@@ -24,7 +24,7 @@ namespace DXApplication1.Services
             {
                 using (var _httpClient = new HttpClient())
                 {
-                    _httpClient.BaseAddress = new Uri("https://localhost:7001/api/bases?pageSize=20&pageNumber=1");
+                    _httpClient.BaseAddress = new Uri($"{MainForm.ApiAdress}/bases?pageSize=20&pageNumber=1");
                     _httpClient.Timeout = new TimeSpan(0, 0, 30);
                     _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                     var response = await _httpClient.GetAsync("");
@@ -47,7 +47,7 @@ namespace DXApplication1.Services
             {
                 using (var _httpClient = new HttpClient())
                 {
-                    _httpClient.BaseAddress = new Uri($"https://localhost:7001/api/bases?cityId={cityId}");
+                    _httpClient.BaseAddress = new Uri($"{MainForm.ApiAdress}/bases?cityId={cityId}");
                     _httpClient.Timeout = new TimeSpan(0, 0, 30);
                     HttpRequestMessage request = new HttpRequestMessage(
                         HttpMethod.Post, _httpClient.BaseAddress);
@@ -71,7 +71,7 @@ namespace DXApplication1.Services
             {
                 using (var _httpClient = new HttpClient())
                 {
-                    _httpClient.BaseAddress = new Uri($"https://localhost:7001/api/bases?cityId={cityId}");
+                    _httpClient.BaseAddress = new Uri($"{MainForm.ApiAdress}/bases?cityId={cityId}");
                     _httpClient.Timeout = new TimeSpan(0, 0, 30);
                     HttpRequestMessage request = new HttpRequestMessage(
                         HttpMethod.Put, _httpClient.BaseAddress);
@@ -95,7 +95,7 @@ namespace DXApplication1.Services
             {
                 using (var _httpClient = new HttpClient())
                 {
-                    _httpClient.BaseAddress = new Uri($"https://localhost:7001/api/bases?baseId={id}");
+                    _httpClient.BaseAddress = new Uri($"{MainForm.ApiAdress}/bases?baseId={id}");
                     _httpClient.Timeout = new TimeSpan(0, 0, 30);
                     var response = await _httpClient.DeleteAsync("");
                     if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
