@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraBars;
+using DXApplication1.Constants;
 using DXApplication1.ProductForms;
 using DXApplication1.Services;
 using System;
@@ -16,6 +17,7 @@ namespace DXApplication1
     {
         public static string Username = null;
         UserService userservice;
+        ViewHide viewHide = ViewHide.View;
         public MainForm()
         {
             InitializeComponent();
@@ -109,6 +111,22 @@ namespace DXApplication1
             Controls.Clear();
             InitializeComponent();
             CheckAuthentication();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if(viewHide == ViewHide.View)
+            {
+                passwordTxtBox.PasswordChar = new char();
+                pictureBox1.Image = Properties.Resources.hide;
+                viewHide = ViewHide.Hide;
+            }
+            else
+            {
+                passwordTxtBox.PasswordChar = '*';
+                pictureBox1.Image = Properties.Resources.view;
+                viewHide = ViewHide.View;
+            }
         }
     }
 }

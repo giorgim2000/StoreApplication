@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.registerBtn = new System.Windows.Forms.Button();
             this.loginBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,6 +49,7 @@
             this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.fluentDesignFormContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -57,6 +59,7 @@
             // 
             this.fluentDesignFormContainer1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(219)))), ((int)(((byte)(149)))));
             this.fluentDesignFormContainer1.Appearance.Options.UseBackColor = true;
+            this.fluentDesignFormContainer1.Controls.Add(this.pictureBox1);
             this.fluentDesignFormContainer1.Controls.Add(this.registerBtn);
             this.fluentDesignFormContainer1.Controls.Add(this.loginBtn);
             this.fluentDesignFormContainer1.Controls.Add(this.label3);
@@ -66,10 +69,22 @@
             this.fluentDesignFormContainer1.Controls.Add(this.label1);
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fluentDesignFormContainer1.Location = new System.Drawing.Point(267, 39);
-            this.fluentDesignFormContainer1.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.fluentDesignFormContainer1.Margin = new System.Windows.Forms.Padding(15);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
             this.fluentDesignFormContainer1.Size = new System.Drawing.Size(875, 667);
             this.fluentDesignFormContainer1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::DXApplication1.Properties.Resources.view;
+            this.pictureBox1.Location = new System.Drawing.Point(641, 264);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // registerBtn
             // 
@@ -77,7 +92,7 @@
             this.registerBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.registerBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerBtn.Location = new System.Drawing.Point(248, 518);
-            this.registerBtn.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.registerBtn.Margin = new System.Windows.Forms.Padding(15);
             this.registerBtn.Name = "registerBtn";
             this.registerBtn.Size = new System.Drawing.Size(387, 110);
             this.registerBtn.TabIndex = 6;
@@ -91,7 +106,7 @@
             this.loginBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.loginBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.Location = new System.Drawing.Point(244, 378);
-            this.loginBtn.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(15);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(387, 110);
             this.loginBtn.TabIndex = 5;
@@ -128,8 +143,9 @@
             this.passwordTxtBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.passwordTxtBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTxtBox.Location = new System.Drawing.Point(248, 264);
-            this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(15);
             this.passwordTxtBox.Name = "passwordTxtBox";
+            this.passwordTxtBox.PasswordChar = '*';
             this.passwordTxtBox.Size = new System.Drawing.Size(383, 32);
             this.passwordTxtBox.TabIndex = 2;
             // 
@@ -138,7 +154,7 @@
             this.userNameTxtBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.userNameTxtBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameTxtBox.Location = new System.Drawing.Point(244, 164);
-            this.userNameTxtBox.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.userNameTxtBox.Margin = new System.Windows.Forms.Padding(15);
             this.userNameTxtBox.Name = "userNameTxtBox";
             this.userNameTxtBox.Size = new System.Drawing.Size(387, 32);
             this.userNameTxtBox.TabIndex = 1;
@@ -162,7 +178,7 @@
             this.accordionControlElement4,
             this.logOutBtn});
             this.accordionControl1.Location = new System.Drawing.Point(0, 39);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(15);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
             this.accordionControl1.Size = new System.Drawing.Size(267, 667);
@@ -258,6 +274,7 @@
             this.Text = "Base Program";
             this.fluentDesignFormContainer1.ResumeLayout(false);
             this.fluentDesignFormContainer1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
@@ -284,6 +301,7 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement logOutBtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
